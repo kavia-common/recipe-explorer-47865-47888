@@ -1,3 +1,27 @@
-<div class="container">
-  <h1>{{ title }}</h1>
-</div>
+<header style="background: var(--gradient); border-bottom: 1px solid rgba(17,24,39,0.06);">
+  <nav class="container" style="display:flex; align-items:center; justify-content:space-between; padding-block: 1rem;">
+    <div style="display:flex; align-items:center; gap:.75rem;">
+      <div style="width:36px; height:36px; border-radius:10px; background: var(--color-primary); box-shadow: var(--shadow-sm);"></div>
+      <div>
+        <h1 style="font-size:1.15rem; font-weight:700;">Recipe Explorer</h1>
+        <p style="font-size:.8rem; color:#6b7280;">Ocean Professional</p>
+      </div>
+    </div>
+    <div style="display:flex; gap:.5rem;">
+      <a routerLink="/" class="btn ghost">Home</a>
+      <a href="#" class="btn secondary" (click)="$event.preventDefault()">About</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container" style="padding-block:1.25rem;">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="container" style="padding-block: 2rem; color:#6b7280; font-size:.85rem;">
+  <hr style="border:0; border-top:1px solid #e5e7eb; margin-bottom: .75rem;">
+  <div style="display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap;">
+    <span>&copy; {{ year }} Recipe Explorer</span>
+    <span>Theme: Ocean Professional</span>
+  </div>
+</footer>

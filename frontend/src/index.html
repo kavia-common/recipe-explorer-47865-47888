@@ -2,10 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Angular</title>
+  <title>Recipe Explorer</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    .material-symbols-outlined { font-style: normal; font-weight: 600; }
+  </style>
+  <script>
+    // Expose environment variables for SSR/CSR hydration if injected at runtime (optional)
+    window.NG_APP_API_BASE = window.NG_APP_API_BASE || '';
+  </script>
 </head>
 <body>
   <app-root></app-root>
